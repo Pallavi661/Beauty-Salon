@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+    <div class="circle"></div>
+    <div id="main">
+        
+        <div id="hero">
+            <div id="nav">
+                <a href="#">Pal's Studio</a>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">MENU+</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Home</a>
+                        <a href="services.html">Services</a>
+                        <a href="book.html">Book Appointments</a>
+                        <a href="about.html">About Us</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            
+
+    <div class="appointment-page">
+        <header>
+            <h1>Book an Appointment</h1>
+            <p>Fill in the details below to schedule your appointment with us.</p>
+        </header>
+
+        <form class="appointment-form" id="appointmentForm" onsubmit="return submitForm(event)">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+            </div>
+            <div class="form-group">
+                <label for="serviceType">Select Service Type:</label>
+                <select id="serviceType" name="serviceType" required onchange="showServices()">
+                    <option value="">Select...</option>
+                    <option value="facial">Facial Service</option>
+                    <option value="hair">Hair Service</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="specificService">Select Specific Service:</label>
+                <select id="specificService" name="specificService" required>
+                    <option value="">Select...</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Preferred Time:</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Additional Notes (Optional):</label>
+                <textarea id="message" name="message" rows="4" placeholder="Any special requests or concerns?"></textarea>
+            </div>
+            <button type="submit" class="btn">Book Now</button>
+        </form>
+    </div>
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Success!</h2>
+            <p>Your appointment has been successfully booked.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Salon Information -->
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>At Glamour & Glow Salon, we bring out the best in you with our premium beauty services and high-quality products. Indulge in luxury and let our expert team enhance your natural beauty.</p>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contact Information -->
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p><strong>Address:</strong> 123 Beauty Lane, Glam City, GC 45678</p>
+                <p><strong>Phone:</strong> +1 (234) 567-890</p>
+                <p><strong>Email:</strong> contact@glamourglo.com</p>
+            </div>
+    
+            <!-- Social Media and Newsletter -->
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                <h2>Newsletter</h2>
+                <form action="#">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Glamour & Glow Salon | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="book.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
